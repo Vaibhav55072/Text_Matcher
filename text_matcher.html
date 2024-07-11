@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Matcher </title>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .input {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .input1 {
+            height: 200px;
+            width: 300px;
+        }
+
+        .input2 {
+            height: 200px;
+            width: 300px;
+            margin: 40px;
+        }
+
+        .main_container {
+            border: 1px solid black;
+            margin-top: 70px;
+            width: 70%;
+            height: 80vh;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            background-color: rgb(194, 234, 222);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_container">
+        <h1>Text Matcher</h1>
+        <div class="input">
+            <input type="text" name="" id="input1" class="input1" placeholder="Enter Text" onkeyup="text()">
+            <input type="text" name="" id="input2" class="input2" placeholder="Enter Text" onkeyup="text()">
+            <p id="result"></p>
+        </div>
+    </div>
+    <script>
+        function text() {
+            const input1Element = document.getElementById("input1")
+            const input2Element = document.getElementById("input2")
+
+            const result1Element = document.getElementById("result")
+
+            if (input1Element.value === input2Element.value) {
+                result1Element.innerText = "Matched !!"
+                result1Element.style.color = 'green'
+            }
+            else {
+                result1Element.innerText = " Not Matched!!"
+                result1Element.style.color = 'Red'
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
